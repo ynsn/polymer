@@ -14,18 +14,20 @@
  * limitations under the License.
  */
 
-#ifndef POLYMER_POLYMER_H
-#define POLYMER_POLYMER_H
+#ifndef POLYMER_LLVM_H
+#define POLYMER_LLVM_H
 
-#include "polymer/base/llvm.h"
+#include <llvm/Support/CommandLine.h>
+#include <llvm/Support/raw_ostream.h>
+#include <llvm/Support/MemoryBuffer.h>
+#include <llvm/Support/SourceMgr.h>
+#include <llvm/Support/TargetSelect.h>
 
 namespace polymer {
 
-/// Initializes Polymer
-inline void initialize() {
-  initializeLLVM();
-}
+/// Initializes LLVM targets
+void initializeLLVM();
 
 }
 
-#endif //POLYMER_POLYMER_H
+#endif //POLYMER_LLVM_H

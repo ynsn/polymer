@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-int main(int argc, char **argv) {
+#include "polymer/polymer.h"
 
+int main(int argc, char **argv) {
+  polymer::initialize();
 }
 

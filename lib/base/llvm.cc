@@ -14,18 +14,19 @@
  * limitations under the License.
  */
 
-#ifndef POLYMER_POLYMER_H
-#define POLYMER_POLYMER_H
-
-#include "polymer/base/llvm.h"
+#include "polymer/polymer.h"
 
 namespace polymer {
 
-/// Initializes Polymer
-inline void initialize() {
-  initializeLLVM();
+/// Initializes LLVM targets
+void initializeLLVM() {
+  llvm::InitializeAllTargets();
+  llvm::InitializeAllTargetMCs();
+  llvm::InitializeAllTargetInfos();
+  llvm::InitializeAllAsmParsers();
+  llvm::InitializeAllAsmPrinters();
+  llvm::InitializeAllDisassemblers();
 }
 
 }
 
-#endif //POLYMER_POLYMER_H

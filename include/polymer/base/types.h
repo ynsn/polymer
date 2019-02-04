@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-#ifndef POLYMER_POLYMER_H
-#define POLYMER_POLYMER_H
-
-#include <iostream>
-#include <cstdint>
-#include <memory>
-
-#include "polymer/base/types.h"
-#include "polymer/memory/allocators/allocator.h"
-#include "polymer/base/llvm.h"
+#ifndef POLYMER_TYPES_H
+#define POLYMER_TYPES_H
 
 namespace polymer {
 
-/// Initializes Polymer
-inline void initialize() {
-  initializeLLVM();
-}
+typedef uint8_t u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
+
+typedef int8_t i8;
+typedef int16_t i16;
+typedef int32_t i32;
+typedef int64_t i64;
+
+typedef float_t f32;
+typedef double_t f64;
 
 }
 
-#endif //POLYMER_POLYMER_H
+#endif //POLYMER_TYPES_H

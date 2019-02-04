@@ -14,23 +14,26 @@
  * limitations under the License.
  */
 
-#ifndef POLYMER_POLYMER_H
-#define POLYMER_POLYMER_H
-
-#include <iostream>
-#include <cstdint>
-#include <memory>
-
-#include "polymer/memory/allocators/allocator.h"
-#include "polymer/base/llvm.h"
+#ifndef POLYMER_ALLOCATOR_H
+#define POLYMER_ALLOCATOR_H
 
 namespace polymer {
 
-/// Initializes Polymer
-inline void initialize() {
-  initializeLLVM();
-}
+/// Allocator - Pure virtual base class that provides a common interface to a Polymer allocator.
+/// \tparam T type that the allocator allocates
+template<typename T>
+class Allocator {
+public:
+  /// Allocates a specified amount of bytes.
+  /// \param size size in bytes to allocate
+  /// \return pointer to allocated memory
+  virtual T *allocate(size_t size) = 0;
+
+  /// Deallocates memory.
+  /// \param dealloc memory to deallocate
+  virtual void deallocate(T *dealloc) = 0;
+};
 
 }
 
-#endif //POLYMER_POLYMER_H
+#endif //POLYMER_ALLOCATOR_H

@@ -23,7 +23,7 @@ else ()
     message(WARNING "Project may not compile without LLVM being found...")
 endif ()
 
-set(POLYMER_LIB_HEADERS include/polymer/polymer.h include/polymer/base/llvm.h)
+set(POLYMER_LIB_HEADERS include/polymer/polymer.h include/polymer/base/llvm.h include/polymer/memory/allocators/allocator.h)
 set(POLYMER_LIB_SOURCES lib/base/llvm.cc)
 add_library(polymerLib STATIC ${POLYMER_LIB_SOURCES} ${POLYMER_LIB_HEADERS})
 target_include_directories(polymerLib PUBLIC include ${LLVM_INCLUDE_DIR})

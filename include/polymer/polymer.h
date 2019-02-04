@@ -17,6 +17,10 @@
 #ifndef POLYMER_POLYMER_H
 #define POLYMER_POLYMER_H
 
+#include <iostream>
+#include <cstdint>
+#include <memory>
+
 #include "polymer/base/llvm.h"
 
 namespace polymer {

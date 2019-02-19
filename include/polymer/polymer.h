@@ -22,7 +22,6 @@
 #include <memory>
 
 #include "polymer/base/types.h"
-#include "polymer/memory/allocators/allocator.h"
 #include "polymer/base/llvm.h"
 
 namespace polymer {

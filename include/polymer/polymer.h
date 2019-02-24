@@ -30,7 +30,7 @@ namespace polymer {
 
 /// Initializes Polymer
 inline void Initialize() {
-  initializeLLVM();
+  InitializeLLVM();
 }
 
 }

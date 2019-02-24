@@ -19,7 +19,7 @@
 namespace polymer {
 
 /// Initializes LLVM targets
-void initializeLLVM() {
+void InitializeLLVM() {
   llvm::InitializeAllTargets();
   llvm::InitializeAllTargetMCs();
   llvm::InitializeAllTargetInfos();

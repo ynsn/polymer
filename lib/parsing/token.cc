@@ -14,25 +14,20 @@
  * limitations under the License.
  */
 
-#ifndef POLYMER_POLYMER_H
-#define POLYMER_POLYMER_H
-
-#include <iostream>
-#include <cstdint>
-#include <memory>
-
-#include "polymer/base/types.h"
-#include "polymer/base/llvm.h"
-
-#include "polymer/parsing/token.h"
+#include "polymer/polymer.h"
 
 namespace polymer {
 
-/// Initializes Polymer
-inline void initialize() {
-  initializeLLVM();
+Token::Token(const TokenKind &kind, std::string value, const llvm::SMLoc startLoc, const llvm::SMLoc endLoc)
+    : kTokenKind(kind), kTokenValue(value), kStartLoc(startLoc), kEndLoc(endLoc) {
+}
+
+bool Token::is(const TokenKind &kind) const {
+  return kTokenKind == kind;
+}
+
+bool Token::isNot(const polymer::TokenKind &kind) const {
+  return !is(kind);
 }
 
 }
-
-#endif //POLYMER_POLYMER_H

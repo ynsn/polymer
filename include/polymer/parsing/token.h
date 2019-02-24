@@ -25,6 +25,11 @@ typedef enum TokenKind {
   EndOfFile
 } TokenKind;
 
+/// Get the name of the TokenKind.
+/// \param kind kind to get name for
+/// \return StringRef containing the kind name
+llvm::StringRef GetTokenKindName(const TokenKind &kind);
+
 /// Token - Represents a lexical token with an associated meaning and value.
 struct Token {
   /// The kind of the token.

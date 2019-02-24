@@ -18,6 +18,21 @@
 
 namespace polymer {
 
+/// ====== Functions ====== ///
+
+llvm::StringRef GetTokenKindName(const TokenKind &kind) {
+  switch (kind) {
+  case None:
+    return "None";
+  case EndOfFile:
+    return "EOF";
+  default:
+    return "<Unknown>";
+  }
+}
+
+/// ====== Implement structure Token ====== ///
+
 Token::Token(const TokenKind &kind, std::string value, const llvm::SMLoc startLoc, const llvm::SMLoc endLoc)
     : kTokenKind(kind), kTokenValue(value), kStartLoc(startLoc), kEndLoc(endLoc) {
 }

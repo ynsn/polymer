@@ -26,7 +26,7 @@
 namespace polymer {
 
 /// Initializes LLVM targets
-void initializeLLVM();
+void InitializeLLVM();
 
 }
 

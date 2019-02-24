@@ -29,7 +29,7 @@
 namespace polymer {
 
 /// Initializes Polymer
-inline void initialize() {
+inline void Initialize() {
   initializeLLVM();
 }
 

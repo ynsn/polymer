@@ -17,6 +17,6 @@
 #include "polymer/polymer.h"
 
 int main(int argc, char **argv) {
-  polymer::initialize();
+  polymer::Initialize();
 }
 

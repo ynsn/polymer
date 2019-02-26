@@ -23,6 +23,7 @@
 
 #include "polymer/base/types.h"
 #include "polymer/base/llvm.h"
+#include "polymer/base/source_file.h"
 
 #include "polymer/parsing/token.h"
 
